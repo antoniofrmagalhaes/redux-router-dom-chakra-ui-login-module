@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import LoginForm from '../../components/LoginForm'
 
@@ -15,9 +14,7 @@ const Login: React.FC = () => {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae.
           </p>
         </Heading>
-        <LoginForm>
-          <Link to="/password/forgot">Forgot your password?</Link>
-        </LoginForm>
+        <LoginForm />
       </FormContainer>
     </Container>
   )
