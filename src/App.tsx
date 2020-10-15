@@ -1,13 +1,11 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { PersistGate } from 'redux-persist/integration/react'
 import { Router as BrowserRouter } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
+import { PersistGate } from 'redux-persist/integration/react'
 
 import ThemeContainer from './contexts/theme/ThemeContainer'
-
 import Routes from './routes'
-
 import AuthProvider from './contexts/AuthContext'
 import { store, persistor } from './store'
 import history from './services/history'
