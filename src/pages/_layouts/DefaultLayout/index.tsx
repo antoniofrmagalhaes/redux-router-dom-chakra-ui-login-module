@@ -1,11 +1,10 @@
-import { Box } from '@chakra-ui/core'
 import React from 'react'
+import { Box } from '@chakra-ui/core'
 
 import Drawer from '../../../components/Drawer'
+import Profile from '../../../components/Profile'
 
 import { ContentContainer, Content } from './styles'
-
-import Profile from '../../../components/Profile'
 
 const DefaultLayout: React.FC = ({ children }) => {
   return (
