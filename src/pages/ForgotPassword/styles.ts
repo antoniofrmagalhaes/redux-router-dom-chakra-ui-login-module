@@ -11,8 +11,6 @@ export const Container = styled.div`
   @media (min-width: 375px) {
     padding: 32px;
   }
-  @media (min-width: 420px) {
-  }
 `
 
 export const Heading = styled.div`
