@@ -64,7 +64,7 @@ export function* resetPassword({
   }
 }
 
-export function setToken({ payload }: ReturnType<typeof signInSuccess>): any {
+export function setToken({ payload }: ReturnType<typeof signInSuccess>): void {
   if (!payload) return
   const { token } = payload
   if (token) {
