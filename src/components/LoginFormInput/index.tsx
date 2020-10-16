@@ -1,15 +1,15 @@
 import React, { InputHTMLAttributes } from 'react'
+import { FormLabel } from '@chakra-ui/core'
 import { useField } from '@unform/core'
 
 import { Container, FormControl, ErrorMessage } from './styles'
-import { FormLabel } from '@chakra-ui/core'
 
-interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string
   name: string
 }
 
-const LoginFormInput: React.FC<IInputProps> = ({ label, name, ...rest }) => {
+const LoginFormInput: React.FC<InputProps> = ({ label, name, ...rest }) => {
   const inputRef = React.useRef(null)
   const { fieldName, defaultValue, error, registerField } = useField(name)
 

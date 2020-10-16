@@ -17,7 +17,6 @@ export const BackButtonPlaceholder = styled.div`
 `
 
 export const Header = styled.div`
-  max-width: 400px;
   width: 100%;
   > p {
     margin: 16px 0;

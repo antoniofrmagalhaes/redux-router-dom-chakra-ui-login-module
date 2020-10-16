@@ -3,13 +3,13 @@ import { FormHandles } from '@unform/core'
 import * as Yup from 'yup'
 
 import LoginFormInput from '../LoginFormInput'
+import LoginFormSubmitButton from '../LoginFormSubmitButton'
 
 import { useAuth } from '../../contexts/AuthContext'
 
 import { Form } from './styles'
 
 import getValidationErrors from '../../utils/getValidationErrors'
-import LoginFormSubmitButton from '../LoginFormSubmitButton'
 
 interface FormData {
   email: string

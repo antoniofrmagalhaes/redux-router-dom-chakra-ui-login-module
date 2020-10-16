@@ -1,21 +1,30 @@
 import React from 'react'
+import ForgotPasswordLink from '../../components/ForgotPasswordLink'
 
 import LoginForm from '../../components/LoginForm'
+import LoginSlider from '../../components/LoginSlider'
 
-import { Container, FormContainer, Heading } from './styles'
+import {
+  Container,
+  LoginFormContainer,
+  ForgotPasswordLinkContainer
+} from './styles'
 
 const Login: React.FC = () => {
   return (
     <Container>
-      <FormContainer>
-        <Heading>
-          <h3>APPLICATION</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae.
-          </p>
-        </Heading>
+      <LoginFormContainer>
         <LoginForm />
-      </FormContainer>
+      </LoginFormContainer>
+      <LoginSlider />
+      <ForgotPasswordLinkContainer>
+        <p>
+          Forgot your password?{' '}
+          <ForgotPasswordLink to="/password/forgot">
+            Get help
+          </ForgotPasswordLink>
+        </p>
+      </ForgotPasswordLinkContainer>
     </Container>
   )
 }

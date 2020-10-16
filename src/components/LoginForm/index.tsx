@@ -6,10 +6,11 @@ import { useAuth } from '../../contexts/AuthContext'
 
 import getValidationErrors from '../../utils/getValidationErrors'
 
-import { Form } from './styles'
 import LoginFormSubmitButton from '../LoginFormSubmitButton'
 import LoginFormInput from '../LoginFormInput'
 import LoginFormCheckbox from '../LoginFormCheckbox'
+
+import { FormContainer, Form } from './styles'
 
 interface FormData {
   email: string
@@ -27,6 +28,7 @@ const LoginForm: React.FC = () => {
           email: Yup.string()
             .email('Insert a valid e-mail.')
             .required('E-mail is required.'),
+
           password: Yup.string().required('Password is required.')
         })
         await schema.validate(
@@ -45,23 +47,24 @@ const LoginForm: React.FC = () => {
     },
     [login]
   )
-
   return (
-    <Form ref={formRef} onSubmit={handleSubmit}>
-      <LoginFormInput
-        label="Your e-mail"
-        name="email"
-        placeholder="email@company.com"
-      />
-      <LoginFormInput
-        label="Password"
-        name="password"
-        type="password"
-        placeholder="••••••••••••"
-      />
-      <LoginFormCheckbox label="Keep me logged in" />
-      <LoginFormSubmitButton>Log in</LoginFormSubmitButton>
-    </Form>
+    <FormContainer>
+      <Form ref={formRef} onSubmit={handleSubmit}>
+        <LoginFormInput
+          label="E-mail"
+          name="email"
+          placeholder="email@company.com"
+        />
+        <LoginFormInput
+          label="Password"
+          name="password"
+          type="password"
+          placeholder="••••••••••••"
+        />
+        <LoginFormCheckbox label="Keep me logged in" />
+        <LoginFormSubmitButton>Log in</LoginFormSubmitButton>
+      </Form>
+    </FormContainer>
   )
 }
 

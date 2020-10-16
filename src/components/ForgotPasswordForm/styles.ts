@@ -14,4 +14,8 @@ export const Container = styled.div`
 export const Form = styled(UnformForm)`
   max-width: 400px;
   width: 100%;
+
+  @media (min-width: 1920px) {
+    max-width: 550px;
+  }
 `

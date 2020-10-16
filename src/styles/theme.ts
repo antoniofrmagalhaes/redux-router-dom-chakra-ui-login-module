@@ -18,13 +18,13 @@ interface ICustomThemeProps extends DefaultTheme {
 const customTheme: ICustomThemeProps = {
   ...theme,
   app: {
-    primary: '#a626aa',
+    primary: '#5b24c2',
     secondary: '#00b2a9',
     success: '#3feb1c',
     error: '#ff2436',
     warning: '#f0ec26',
     info: '#24aec9',
-    primaryTextColor: '#e1e1e4',
+    primaryTextColor: '#ffffff',
     secondaryTextColor: '#2e2e2e',
     border: '#dddddd',
     background: '#f1f1f1'

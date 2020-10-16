@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { InputHTMLAttributes } from 'react'
 
 import { Container, Checkbox } from './styles'
 
-interface ILoginFormCheckboxProps {
+interface ILoginFormCheckboxProps
+  extends InputHTMLAttributes<HTMLInputElement> {
   label: string
 }
 
@@ -11,7 +11,6 @@ const LoginFormCheckbox: React.FC<ILoginFormCheckboxProps> = ({ label }) => {
   return (
     <Container>
       <Checkbox defaultIsChecked>{label}</Checkbox>
-      <Link to="/password/forgot">Forgot your password?</Link>
     </Container>
   )
 }

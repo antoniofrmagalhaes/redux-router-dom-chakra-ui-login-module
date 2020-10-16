@@ -4,22 +4,25 @@ import { RiArrowLeftLine } from 'react-icons/ri'
 
 import LoginNavigationButton from '../../components/LoginNavigationButton'
 import ResetPasswordForm from '../../components/ResetPasswordForm'
+// import { FormContainer } from '../Login/styles'
 
 import { Container, Header } from './styles'
 
 const ResetPassword: React.FC = () => {
   return (
     <Container>
-      <Header>
-        <Heading as="h2" size="xl">
-          Reset password
-        </Heading>
-        <Text fontSize="lg">
-          We highly recommend you to not reuse previous passwords.
-        </Text>
-      </Header>
-      <ResetPasswordForm />
-      <LoginNavigationButton path="/login" float="right">
+      {/* <FormContainer>
+        <Header>
+          <Heading as="h2" size="lg">
+            Reset password
+          </Heading>
+          <Text fontSize="sm">
+            We highly recommend you to not reuse previous passwords.
+          </Text>
+        </Header>
+        <ResetPasswordForm />
+      </FormContainer> */}
+      <LoginNavigationButton path="/login">
         <Flex alignItems="center">
           <RiArrowLeftLine size={18} /> Back to login
         </Flex>

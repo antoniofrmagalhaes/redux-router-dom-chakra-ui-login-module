@@ -20,7 +20,7 @@ const ForgotPassword: React.FC = () => {
       <ForgotPasswordForm />
       <LoginNavigationButton path="/login">
         <Flex alignItems="center">
-          <RiArrowLeftLine size={18} /> Back to login
+          <RiArrowLeftLine /> Back to login
         </Flex>
       </LoginNavigationButton>
     </Container>

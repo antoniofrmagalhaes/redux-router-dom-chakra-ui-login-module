@@ -32,17 +32,17 @@ export const Container = styled.div<IContainerProps>`
     }
     &:hover,
     &:active {
-      color: #5b24c2;
+      color: ${({ theme }) => theme.app.primary};
       opacity: 1;
     }
   }
 
   @media screen and (min-width: 1024px) {
-    top: initial;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-top: 1px solid #eeeeee;
+    > a {
+      font-size: 16px;
+    }
+  }
+  @media screen and (min-width: 1600px) {
     > a {
       font-size: 16px;
     }

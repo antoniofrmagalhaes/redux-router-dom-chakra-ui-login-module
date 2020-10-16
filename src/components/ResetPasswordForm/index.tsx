@@ -1,6 +1,5 @@
 import React from 'react'
 import { SubmitHandler, FormHandles } from '@unform/core'
-import { FormLabel } from '@chakra-ui/core'
 import { RouteComponentProps, withRouter } from 'react-router-dom'
 import * as Yup from 'yup'
 
@@ -8,7 +7,10 @@ import { useAuth } from '../../contexts/AuthContext'
 
 import getValidationErrors from '../../utils/getValidationErrors'
 
-import { Form, FormControl, Styledinput } from './styles'
+import LoginFormSubmitButton from '../LoginFormSubmitButton'
+import LoginFormInput from '../LoginFormInput'
+
+import { Form } from './styles'
 
 interface FormData {
   password: string
@@ -55,19 +57,13 @@ const ResetPasswordForm: React.FC<RouteComponentProps<TokenType>> = ({
   }
   return (
     <Form ref={formRef} onSubmit={handleSubmit}>
-      <FormControl isRequired>
-        <FormLabel htmlFor="password" mb="3px" color="#777777">
-          New Password
-        </FormLabel>
-        <Styledinput name="password" type="password" />
-      </FormControl>
-      <FormControl mt="16px" isRequired>
-        <FormLabel htmlFor="confirmPassword" mb="3px" color="#777777">
-          Confirm Password
-        </FormLabel>
-        <Styledinput name="confirmPassword" type="password" />
-      </FormControl>
-      <button type="submit">Reset Password</button>
+      <LoginFormInput label="New Password" type="password" name="password" />
+      <LoginFormInput
+        label="Confirm Password"
+        type="password"
+        name="confirmPassword"
+      />
+      <LoginFormSubmitButton>Reset Password</LoginFormSubmitButton>
     </Form>
   )
 }
